@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Event Registration Form</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="form-container">
+    <h1>Event Registration Form</h1>
+    <form action="/submit" method="POST">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" placeholder="Enter your name" required />
+      </div>
+
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" name="age" id="age" placeholder="Enter your age" required />
+      </div>
+
+      <div class="form-group">
+        <label for="mono">Mobile Number:</label>
+        <input type="number" name="mono" id="mono" placeholder="Enter your mobile number" required />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required />
+      </div>
+
+      <div class="form-group">
+        <label for="activity">Choose an Event:</label>
+        <select name="activity" id="activity" required>
+          <option value="">-- Select Event --</option>
+          <option value="Dance">Dance</option>
+          <option value="Group Dance">Group Dance</option>
+          <option value="Singing">Singing</option>
+          <option value="Group Singing">Group Singing</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="grpname">Enter Group Name (if any):</label>
+        <input type="text" name="grpname" id="grpname" placeholder="Group Name" />
+      </div>
+
+      <button type="submit" class="btn">SUBMIT</button>
+    </form>
+  </div>
+</body>
+</html>

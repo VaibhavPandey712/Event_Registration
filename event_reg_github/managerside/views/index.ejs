@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manager Side</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="manager-container">
+        <h1 id="heading">Search User by ID</h1>
+        <form action="/submit" method="POST" class="search-form">
+            <label for="id" id="label">Enter ID:</label>
+            <input type="number" name="id" id="id" placeholder="Enter ID" required />
+            <button type="submit" class="btn">Search</button>
+        </form>
+
+        <% if (user) { %>
+            <div class="result success">
+                <h3>User Found ✅</h3>
+                <p><strong>Name:</strong>
+                    <%= user.name %>
+                </p>
+                <p><strong>Age:</strong>
+                    <%= user.age %>
+                </p>
+                <p><strong>Mobile Number:</strong>
+                    <%= user.mono %>
+                </p>
+                <p><strong>Email:</strong>
+                    <%= user.email %>
+                </p>
+                <p><strong>Event:</strong>
+                    <%= user.event %>
+                </p>
+                <p><strong>Group Name:</strong>
+                    <%= user.groupname %>
+                </p>
+                <p><strong>Submission Date:</strong>
+                    <%= user.submissiondate %>
+                </p>
+            </div>
+            <% } else if (typeof user !=='undefined' ) { %>
+                <div class="result error">
+                    <h3>User Not Found ❌</h3>
+                </div>
+                <% } %>
+    </div>
+</body>
+
+</html>
